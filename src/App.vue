@@ -1,21 +1,23 @@
 <template>
   <div id="app">
     <router-view/>
+    <LoadingScreen v-if="loading"></LoadingScreen>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  import LoadingScreen from './components/LoadingScreen';
+  import {mapState} from 'vuex';
 
-</style>
+  export default {
+    computed: {
+      ...mapState(['loading'])
+    },
+    components: {
+      LoadingScreen
+    },
+    mounted() {
+    }
+  }
+</script>

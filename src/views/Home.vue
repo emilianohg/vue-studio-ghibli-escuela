@@ -18,6 +18,7 @@
                  :title="movie.title"
                  :director="movie.director"
                  :rt_score="movie.rt_score"
+                 :release_date="movie.release_date"
       ></CardMovie>
     </section>
   </div>
