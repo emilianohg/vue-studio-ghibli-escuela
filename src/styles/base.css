@@ -1,0 +1,10 @@
+.container {
+    display: block;
+    max-width: 1050px;
+    width: auto;
+    margin: 20px auto;
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
