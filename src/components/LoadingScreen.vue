@@ -1,5 +1,5 @@
 <template>
-  <div class="screen-loading">
+  <div class="screen-loading" v-if="loading">
     <img class="image-loading" src="../assets/totoro.gif" alt="totoro">
     <div class="text-loading">
       <p>LOADING <span>...</span></p>
