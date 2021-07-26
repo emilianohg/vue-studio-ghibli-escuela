@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import MovieDetails from "../views/MovieDetails";
+import MovieDetails from '../views/MovieDetails';
+import PageNotFound from '../views/PageNotFound';
 
 Vue.use(VueRouter)
 
@@ -23,13 +24,10 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-    meta: {
-      title: 'Studio Ghibli',
-    }
-  }
+    path: "*",
+    name: 'PageNotFound',
+    component: PageNotFound
+  },
 ]
 
 const router = new VueRouter({

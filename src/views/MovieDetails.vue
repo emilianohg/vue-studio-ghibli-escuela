@@ -1,19 +1,20 @@
 <template>
   <section class="container">
-    <article class="movie">
+    <page-not-found v-if="movie === null"></page-not-found>
+    <article class="movie" v-if="movie !== null">
       <div class="movie-poster">
         <img class="poster" :src="movie.poster" :alt="movie.title">
         <Rating :rate="movie.rt_score"></Rating>
       </div>
       <div>
-        <div>
+        <div class="box-title">
           <h1>{{ movie.title }}</h1>
           <h2>{{ movie.original_title }}</h2>
-          <p>Director: {{ movie.director }}</p>
         </div>
         <div>
-          <p>Lanzamiento: {{ movie.release_date }}</p>
-          <p>Duración: {{ movie.running_time }} minutos.</p>
+          <p>Director: {{ movie.director }}</p>
+          <p>Release date: {{ movie.release_date }}</p>
+          <p>Duration: {{ movie.running_time }} minutos.</p>
         </div>
         <div class="description">
           <p>
@@ -28,10 +29,11 @@
 <script>
 import {mapActions, mapState} from 'vuex'
 import Rating from '../components/Rating'
+import PageNotFound from "./PageNotFound";
 
 export default {
   name: "MovieDetails",
-  components: {Rating},
+  components: {PageNotFound, Rating},
   computed: {
     ...mapState(['loading', 'movie'])
   },
@@ -45,6 +47,9 @@ export default {
 </script>
 
 <style scoped>
+  p {
+    margin-bottom: 1rem;
+  }
   .movie {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -68,6 +73,12 @@ export default {
   }
   .description {
     color: #555555;
+  }
+  .box-title {
+    margin-bottom: 2rem;
+  }
+  .description {
+    margin-top: 2rem;
   }
   @media (max-width: 660px) {
     .movie {

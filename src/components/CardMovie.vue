@@ -6,7 +6,7 @@
     </div>
     <div class="card-content">
       <div class="box-title-and-director">
-        <div class="movie-title" v-bind:class="{ 'movie-liked':  rt_score >= 80, 'movie-dont-liked': rt_score < 80}">
+        <div class="movie-title">
           <h1>{{ title }}</h1>
         </div>
         <div class="movie-director">
@@ -40,17 +40,18 @@ export default {
   .card-movie {
     display: grid;
     grid-template-rows: 300px 85px;
-    box-shadow: 0 0 4px #b3b3b3;
+    box-shadow: 0 0 4px var(--gray);
     border-radius: 5px;
     cursor: pointer;
     overflow: hidden;
+    background-color: var(--white);
   }
   .poster-movie {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #ddd;
+    background-color: var(--soft-gray);
   }
   .poster-movie img {
     display: block;
@@ -69,12 +70,6 @@ export default {
   }
   .movie-title {
     font-size: 0.9rem;
-  }
-  .movie-liked {
-    color: #1B5E20;
-  }
-  .movie-dont-liked {
-    color: #F57F17;
   }
   .movie-director {
     font-size: 0.5rem;

@@ -29,7 +29,7 @@ export default {
     z-index: 9999;
     top: 0;
     flex-flow: column;
-    background-color: #fff;
+    background-color: var(--white);
   }
   .image-loading {
     border-radius: 100%;

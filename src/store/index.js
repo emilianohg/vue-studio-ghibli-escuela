@@ -47,8 +47,6 @@ export default new Vuex.Store({
 
       commit('SET_LOADING', false)
 
-      if (movie == null) return;
-
       commit('SET_MOVIE', movie)
     },
   },
