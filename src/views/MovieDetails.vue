@@ -42,6 +42,7 @@ export default {
   },
   mounted() {
     this.getMovie(this.$route.params.id)
+    scrollTo(0, 0)
   }
 }
 </script>
