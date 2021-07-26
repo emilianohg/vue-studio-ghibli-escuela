@@ -1,5 +1,8 @@
 # vue-peliculas-demo
 
+## Link to website
+http://studio-ghibli-demo.s3-website-us-west-1.amazonaws.com/
+
 ## Project setup
 ```
 npm install
@@ -19,6 +22,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
